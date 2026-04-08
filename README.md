@@ -28,6 +28,11 @@ Part 1 includes:
 - `test_plan.md` - manual verification checklist
 - `tests/` - lightweight automated unit tests
 
+Part 1 also includes dedicated planning and testing documents for the design and verification sections of the assignment:
+
+- `part 1/planning.md`
+- `part 1/test_plan.md`
+
 ### Part 1 verification guide
 
 #### Step 1: start Docker and confirm services
