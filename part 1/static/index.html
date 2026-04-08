@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Dew CIS Solutions</p>
+          <h1>File Archive Dashboard</h1>
+          <p class="intro">
+            Live view of archive runs, file events, and aggregated totals. The table
+            refreshes every 10 seconds.
+          </p>
+        </div>
+        <div class="refresh-pill" id="refreshStatus">Refreshing every 10s</div>
+      </section>
+
+      <section class="stats-grid" id="statsGrid">
+        <article class="stat-card">
+          <span>Total Runs</span>
+          <strong id="totalRuns">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total Archived</span>
+          <strong id="totalArchived">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total Skipped</span>
+          <strong id="totalSkipped">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total Errors</span>
+          <strong id="totalErrors">0</strong>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Runs</h2>
+          <span class="muted" id="groupStats"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Run ID</th>
+                <th>Group</th>
+                <th>Started</th>
+                <th>Duration (s)</th>
+                <th>Moved</th>
+                <th>Skipped</th>
+                <th>Errors</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="runsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Run Detail</h2>
+          <span class="muted" id="detailTitle">Select a run to inspect file events</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Status</th>
+                <th>Reason</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="filesTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
